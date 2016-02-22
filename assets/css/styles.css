@@ -33,22 +33,100 @@ header {
   vertical-align: top;
 }
 
+/*styling for the column on the left*/
+
 .sideBar {
   margin-left: 9%;
-  width: 20.5%;
-  border: 1px solid black;
+  width: 19%;
+  /*border: 1px solid black;*/
   display: inline-block;
-  padding-left: .5em;
+  margin-top: 20px;
   padding-right: .5em;
 }
 
+/*styling for the image of the octocat*/
+
 .octocatImage {
   max-width: 100%;
+  border-radius: .5em;
 }
 
+/*styling for the username*/
+
+.name {
+    font-size: 1.6em;
+    font-weight: bold;
+    margin-top: .5em;
+}
+
+/*Styling for the username*/
+
+.username {
+    font-weight: lighter;
+    font-size: 1.2em;
+    color: #666;
+    margin-top: .2em;
+    padding-bottom: .5em;
+    border-bottom: solid 1px #e5e5e5;
+}
+
+/*styling for the userInfo list*/
+
+.userInfo {
+    padding-top: .5em;
+    padding-bottom: .5em;
+    border-bottom: solid 1px #e5e5e5;
+    line-height: 1.7;
+    font-size: .9em;
+}
+
+/*styling for small icons*/
+
+.listIcon {
+    padding-right: .5em;
+    width: 7%;
+    text-align: center;
+    color: #767676;
+}
+
+/*styling for the statsDiv*/
+
+.statsDiv {
+    padding-bottom: .5em;
+    border-bottom: solid 1px #e5e5e5;
+}
+
+/*styling for stat numbers*/
+
+.stats {
+    display: inline-block;
+    text-align: center;
+    width: 32%;
+    padding-top: .5em;
+}
+
+/*styling for children of stats*/
+
+.statFigures {
+    font-size: 1.7em;
+    color: #4078c0;
+    font-weight: bold;
+}
+
+.statUnits {
+    color: #e5e5e5;
+    font-size: .75em;
+    color: #767676;
+}
+
+/*styling for the column on the right*/
+
 .rightColumn {
-  width: 61.5%;
+  width: 60%;
   border: 1px solid black;
   display: inline-block;
-  padding: 2em .5em 2em .5em;
+  padding: 0 0 2em .5em;
+  margin-top: 20px;
+  margin-right: 9%;
+  float: right;
 }
