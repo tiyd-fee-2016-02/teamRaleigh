@@ -32,8 +32,20 @@
       <section class="rightColumn">
         <div class="rightColumnHeader">
             <h2 class="tab activeTab"><span class="octicon octicon-diff-added"></span> Contributions</h2>
-            <h2 class="tab"><span class="octicon octicon-diff-added"></span> Contributions</h2>
-            <h2 class="tab"><span class="octicon octicon-diff-added"></span> Contributions</h2>
+            <h2 class="tab"><span class="octicon octicon-rss"></span> Repositories</h2>
+            <h2 class="tab"><span class="octicon octicon-repo"></span> Public activity</h2>
+            <div class="headerBtnsRight">
+                <button class="followBtn" type="button"><span class="octicon octicon-person"></span> Follow</button>
+                <button class="blockBtn" type="button">
+                    <span class="octicon octicon-stop"></span>
+                    <select class="blockBtnDropdown">
+                    <option value="" selected disabled></option>
+                    <option value="" selected disabled>User actions</option>
+                    <option>Block user</option>
+                    <option>Report abuse</option>
+                  </select>
+                </button>
+            </div>
         </div>
         <div class="tabContainer">
             <div class="popRepoTabContents">
@@ -72,6 +84,7 @@
                     <option>1 week</option>
                     <option>1 month</option>
                   </select>
+                </button>
             </h3>
         </div>
 
