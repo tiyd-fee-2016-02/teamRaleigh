@@ -30,36 +30,51 @@
             </div>
       </aside>
       <section class="rightColumn">
-          <section class="contributions">
-                    <h2 class="firstTab"><span class="octicon octicon-diff-added"></span> Contributions</h2>
-              <div class="tabContainer">
-                      <h3 class="popularRepositories">Popular repositories</h3>
-                          <ul class="repositories">
-                              <li class="repoTitle"><span class="octicon octicon-repo"></span>
-                                  Spoon-Knife
-                              </li>
-                                  <li class="description">This repo is for demonstration purposes only.</li>
-                              <li class="repoTitle"><span class="octicon octicon-repo"></span>
-                                  Hello-World
-                              </li>
-                                  <li class="description">My first repository on Github!</li>
-                              <li class="repoTitle"><span class="octicon octicon-repo"></span>
-                                  hello-world
-                              </li>
-                                  <li class="description">My first repository on Github!</li>
-                              <li class="repoTitle"><span class="octicon octicon-repo"></span>
-                                  octocat.github.io
-                              </li>
-                                  <li class="description"></li>
-                              <li class="repoTitle"><span class="octicon octicon-repo"></span>
-                                  git-consortium
-                              </li>
-                                  <li class="description">This repo is for demonstration purposes only.</li>
-                         </ul>
-              </div>
-                      <h3 class="contributionActivity">
-                          Contribution Activity
-                      </h3>
+        <div class="rightColumnHeader">
+            <h2 class="tab activeTab"><span class="octicon octicon-diff-added"></span> Contributions</h2>
+            <h2 class="tab"><span class="octicon octicon-diff-added"></span> Contributions</h2>
+            <h2 class="tab"><span class="octicon octicon-diff-added"></span> Contributions</h2>
+        </div>
+        <div class="tabContainer">
+            <div class="popRepoTabContents">
+                <h3 class="popularRepositories">Popular repositories</h3>
+                <ul class="repositories">
+                    <li class="repoTitle"><span class="octicon octicon-repo"></span>
+                        Spoon-Knife
+                    </li>
+                        <li class="description">This repo is for demonstration purposes only.</li>
+                    <li class="repoTitle"><span class="octicon octicon-repo"></span>
+                        Hello-World
+                    </li>
+                        <li class="description">My first repository on Github!</li>
+                    <li class="repoTitle"><span class="octicon octicon-repo"></span>
+                        hello-world
+                    </li>
+                        <li class="description">My first repository on Github!</li>
+                    <li class="repoTitle"><span class="octicon octicon-repo"></span>
+                        octocat.github.io
+                    </li>
+                        <li class="description"></li>
+                    <li class="repoTitle"><span class="octicon octicon-repo"></span>
+                        git-consortium
+                    </li>
+                        <li id="lastDescription" class="description">This repo is for demonstration purposes only.</li>
+                </ul>
+            </div>
+            <h3 class="contributionActivity">
+                Contribution Activity
+                <button class="btn" type="button">
+                  <span class="periodTxt">Period:</span>
+                  <select class="timePeriod">
+                    <option value="" selected disabled>Filter Activity</option>
+                    <option>1 day</option>
+                    <option>3 days</option>
+                    <option>1 week</option>
+                    <option>1 month</option>
+                  </select>
+            </h3>
+        </div>
+
           </section>
           <section class="repositories">
           </section>
