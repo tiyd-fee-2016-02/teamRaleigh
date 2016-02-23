@@ -279,6 +279,7 @@ header {
 }
 
 /*Styling for public activity list*/
+
 .publicActivityDiv {
   padding: 3em;
   text-align: center;
@@ -298,11 +299,29 @@ header {
 
 /*styling for footer*/
 
-/*.footerContainer {
-        width: 980px;
+.footerContainer {
+    margin-left: 9%;
+    margin-right: 9%;
+    text-align: center;
+    color: #767676;
+    border-top: 1px solid #eee;
+    margin-top: 3em;
 }
 
 .footerNav {
-    font: 13px / 1.4 Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    display: inline-block;
+    font-size: .8em;
+    line-height: 1.5;
+    padding-top: 5px;
+    padding-bottom: 40px;
+    margin-top: 40px;
+    word-wrap: break-word;
+    color: #4078c0;
+}
 
-}*/
+#octocatFooterIcon {
+    font-size: 2em;
+    padding-left: 3em;
+    padding-right: 3em;
+    color: #ccc;
+}
