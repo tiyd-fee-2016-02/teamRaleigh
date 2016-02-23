@@ -123,10 +123,84 @@ header {
 
 .rightColumn {
   width: 60%;
-  border: 1px solid black;
+  /*border: 1px solid black;*/
   display: inline-block;
   padding: 0 0 2em .5em;
   margin-top: 20px;
   margin-right: 9%;
   float: right;
+}
+
+/*styling for the contributions tab*/
+
+.contributions {
+    font-weight: lighter;
+    font-size: 1em;
+    padding-top: .5em;
+}
+
+/*styling for firstTab*/
+
+.firstTab {
+    padding-bottom: 1em;
+}
+
+/*styling for tabContainer*/
+
+.tabContainer {
+    border: solid 1px #e5e5e5;
+    border-radius: .2em;
+}
+
+/*styling for the popularRepositories section */
+
+.popularRepositories {
+    font-size: .9em;
+    font-weight: bold;
+    border-bottom: solid 1px #e5e5e5;
+    padding: .7em 0 .7em .5em;
+    background-color: #f5f5f5;
+}
+
+/*styling for repositories */
+
+.repositories {
+    text-decoration: none;
+}
+
+/*styling for octicon octicon-repo icons*/
+
+.octicon.octicon-repo {
+    color: #767676;
+    padding-right: .2em;
+    padding-left:  .7em;
+}
+
+/*styling for repoTitle*/
+
+.repoTitle {
+    color: #4078c0;
+    width: 45%;
+    display: inline-block;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    font-weight: bold;
+    font-size: .9em;
+}
+
+/*styling for stars on right side*/
+
+.stars {
+    position: absolute;
+}
+
+/*styling for Title description*/
+
+.description {
+    display: block;
+    max-width: 100%;
+    padding: 0 0 .5em 2em;
+    font-size: .8em;
+    color: #666;
+    font-weight: 500;
 }
