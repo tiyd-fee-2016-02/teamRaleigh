@@ -17,23 +17,23 @@
             <h3 class="name">The Octocat</h3>
             <h4 class="username">octocat</h4>
             <ul class="userInfo">
-                <li><span class="listIcon octicon octicon-organization"></span>GitHub</li>
-                <li><span class="listIcon octicon octicon-location"></span>San Francisco</li>
-                <li><span class="listIcon octicon octicon-mail"></span><a href="mailto:octocat@github.com">octocat@github.com</a></li>
-                <li><span class="listIcon octicon octicon-link"></span><a href="http://www.github.com/blog">http://www.github.com/blog</a></li>
-                <li><span class="listIcon octicon octicon-clock"></span>Joined on Jan 25, 2011</li>
+                <li class="org"><span class="listIcon octicon octicon-organization"></span>GitHub</li>
+                <li class="city"><span class="listIcon octicon octicon-location"></span>San Francisco</li>
+                <li class="emailAddress"><span class="listIcon octicon octicon-mail"></span><a href="mailto:octocat@github.com">octocat@github.com</a></li>
+                <li class="blog"><span class="listIcon octicon octicon-link"></span><a href="http://www.github.com/blog">http://www.github.com/blog</a></li>
+                <li class="dateJoined"><span class="listIcon octicon octicon-clock"></span>Joined on Jan 25, 2011</li>
             </ul>
             <div class="statsDiv">
-                <div class="stats"><h1 class="statFigures">1.3k</h1><h4 class="statUnits">Followers</h4></div>
-                <div class="stats"><h1 class="statFigures">2</h1><h4 class="statUnits">Starred</h4></div>
-                <div class="stats"><h1 class="statFigures">6</h1><h4 class="statUnits">Following</h4></div>
+                <div class="stats"><h1 class="statFigures followers">1.3k</h1><h4 class="statUnits">Followers</h4></div>
+                <div class="stats"><h1 class="statFigures starred">2</h1><h4 class="statUnits">Starred</h4></div>
+                <div class="stats"><h1 class="statFigures following">6</h1><h4 class="statUnits">Following</h4></div>
             </div>
       </aside>
       <section class="rightColumn">
         <div class="rightColumnHeader">
-            <h2 class="tab activeTab"><span class="octicon octicon-diff-added"></span> Contributions</h2>
-            <h2 class="tab"><span class="octicon octicon-rss"></span> Repositories</h2>
-            <h2 class="tab"><span class="octicon octicon-repo"></span> Public activity</h2>
+            <h2 class="tab contributionsTab activeTab"><span class="octicon octicon-diff-added"></span> Contributions</h2>
+            <h2 class="tab repositoriesTab"><span class="octicon octicon-rss"></span> Repositories</h2>
+            <h2 class="tab publicActivityTab"><span class="octicon octicon-repo"></span> Public activity</h2>
             <div class="headerBtnsRight">
                 <button class="followBtn" type="button"><span class="octicon octicon-person"></span> Follow</button>
                 <button class="blockBtn" type="button">
@@ -47,7 +47,7 @@
                 </button>
             </div>
         </div>
-        <div class="tabContainer popRepos">
+        <div class="tabContainer contributionsTab">
             <div class="popRepoTabContents">
                 <h3 class="popularRepositories">Popular repositories</h3>
                 <ul class="popRepositoriesList">
@@ -88,7 +88,7 @@
             </h3>
             <div class="publicActivityDiv">octocat has no activity during this period.</div>
         </div>
-        <div class="tabContainer repositories hidden">
+        <div class="tabContainer repositoriesTab hidden">
           <div class="reposSearchHeader">
             <input type="text" class="searchBar" placeholder="Find a repository...">
             <button class="searchReposBtn" type="button">Search</button>
@@ -117,7 +117,7 @@
                   <li class="description">This repo is for demonstration purposes only.</li>
           </ul>
         </div>
-        <div class="tabContainer publicActivity hidden">
+        <div class="tabContainer publicActivityTab hidden">
             <div class="publicActivityDiv">octocat doesn’t have any public events to show.</div>
         </div>
       </section>
