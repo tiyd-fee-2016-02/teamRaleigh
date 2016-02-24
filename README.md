@@ -12,3 +12,5 @@ Jeremy put the JSON files in the proper directories on the Master branch and ini
 2/23/16
 
 Mike worked on putting the finishing touches on what remained for the CSS.
+
+Jeremy did the jquery on the tabs
