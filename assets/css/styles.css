@@ -146,6 +146,7 @@ img {
 /*styling for all Tabs*/
 
 .tab {
+  position: relative;
   font-weight: lighter;
   font-size: .9em;
   padding-bottom: 1em;
@@ -156,9 +157,18 @@ img {
 /*styling for the active tab*/
 
 .activeTab {
-
   border: solid 1px #e5e5e5;
-  border-bottom: none;
+}
+
+/*Styling for the object we display below the active tab to cover the border*/
+
+.activeBorder {
+  position: absolute;
+  border: solid 1px white;
+  top: 34;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 /*styling for the follow and block buttons*/
