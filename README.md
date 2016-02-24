@@ -16,3 +16,7 @@ Mike worked on putting the finishing touches on what remained for the CSS.
 Jeremy did the jquery on the tabs
 
 We worked together remotely (via Screenhero) to tackle the json business. 
+
+2/24/16
+
+Mike added the nav elements next to the search bar providing the mouse over effects, and got all the buttons, margins and padding looking close to pixel perfect. 
