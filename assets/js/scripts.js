@@ -40,7 +40,7 @@ $(document).ready( function () {
      $(".org").html(json.company);
      $(".city").html(json.location);
      $(".emailAddress").append('<a href="mailto:'+json.email+'">'+json.email+'</a>');
-     $(".blog").html(json.html_url);
+     $(".blog").append('<a href='+json.html_url+'>'+json.html_url+'</a>');
      $(".dateJoined").html(time);
      $(".followers").html(json.followers);
      $(".starred").html(json.starred);
