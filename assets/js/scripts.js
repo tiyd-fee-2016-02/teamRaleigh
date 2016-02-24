@@ -38,7 +38,7 @@ $(document).ready( function () {
      $(".name").html(json.name);
      $(".username").html(json.login);
      $(".org").html(json.company);
-     $(".city").html(json.location);
+    //  $(".city").html(json.location);
      $(".emailAddress").append('<a href="mailto:'+json.email+'">'+json.email+'</a>');
      $(".blog").append('<a href='+json.html_url+'>'+json.html_url+'</a>');
      $(".dateJoined").html(time);
@@ -46,5 +46,10 @@ $(document).ready( function () {
      $(".starred").html(json.starred);
      $(".following").html(json.following);
   });
+
+//let's replace the json.location api information with a lodash template-sourced thing
+  var greeting = _.template('<%- p.location %>', { variable: 'p' });
+  var renderedHtml = greeting({ location: 'Raleigh, NC' });
+  $(".city").html(renderedHtml);
 
 });
