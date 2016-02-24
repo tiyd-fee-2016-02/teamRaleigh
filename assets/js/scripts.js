@@ -9,7 +9,7 @@ $(document).ready( function () {
       $(this).siblings().removeClass("activeTab"); //remove class active from other tabs
       for (var i=0; i < $(".tabContainer").length; i++){
         var iElement = $(".tabContainer")[i];
-        if ($(iElement).attr("class").includes("hidden")) { //I think this is working ...?
+        if ($(iElement).attr("class").includes("hidden")) {
           $(iElement).removeClass("hidden");
         } else {
           $(iElement).addClass("hidden");
