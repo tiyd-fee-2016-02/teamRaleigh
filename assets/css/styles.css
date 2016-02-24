@@ -47,8 +47,14 @@ header {
 /*styling for the image of the octocat*/
 
 .octocatImage {
-  max-width: 100%;
+  width: 230px;
+  /*height: 230px;*/
   border-radius: .5em;
+}
+
+img {
+  width: inherit;
+  border-radius: inherit;
 }
 
 /*styling for the username*/
