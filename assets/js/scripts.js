@@ -31,15 +31,15 @@ $(document).ready( function () {
   });
 
   // some of these are not pulling in correctly. We will continue to troubleshoot them
-  $.getJSON( "https://api.github.com/users/silentdjay", function( json ) {
+  $.getJSON( "https://api.github.com/users/mike-crane", function( json ) {
     var time = new Date(json.created_at).toLocaleDateString();
 
-     $(".octocatImage").append('<img src="'+json.avatar_url+'" alt="avatar"></img>')
+     $(".octocatImage").append('<img src="'+json.avatar_url+'" alt="avatar"></img>');
      $(".name").html(json.name);
      $(".username").html(json.login);
      $(".org").html(json.company);
      $(".city").html(json.location);
-     $(".emailAddress").html(json.email);
+     $(".emailAddress").append('<a href="mailto:'+json.email+'">'+json.email+'</a>');
      $(".blog").html(json.html_url);
      $(".dateJoined").html(time);
      $(".followers").html(json.followers);
