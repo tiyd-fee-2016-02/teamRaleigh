@@ -11,6 +11,11 @@
       <header>
           <span id="gitHubLogo" class="octicon octicon-mark-github"></span>
           <input type="text" class="searchBar" placeholder="Search GitHub">
+          <div class="headerNav">
+              <span id="pullRequests">Pull requests</span>
+              <span id="issues">Issues</span>
+              <span id="gists">Gists</span>
+          </div>
       </header>
       <aside class="sideBar">
             <span class="octocatImage"></span>
@@ -36,15 +41,13 @@
             <h2 class="tab publicActivityTab"><span class="octicon octicon-repo"></span> Public activity<div class="bottomBorder"></div></h2>
             <div class="headerBtnsRight">
                 <button class="followBtn" type="button"><span class="octicon octicon-person"></span> Follow</button>
-                <button class="blockBtn" type="button">
-                    <span class="octicon octicon-stop"></span>
-                    <select class="blockBtnDropdown">
-                    <option value="" selected disabled></option>
+                <button class="blockBtn"><span class="octicon octicon-stop"></span><span id="blockBtnDropdown" class="octicon octicon-triangle-down"></span></button>
+
+                    <!-- <select class="blockBtnDropdown"></select> -->
+                    <!-- <option value="" selected disabled></option>
                     <option value="" selected disabled>User actions</option>
                     <option>Block user</option>
-                    <option>Report abuse</option>
-                  </select>
-                </button>
+                    <option>Report abuse</option> -->
             </div>
         </div>
         <div class="tabContainer contributionsTab">
@@ -75,16 +78,17 @@
             </div>
             <h3 class="contributionActivity">
                 Contribution Activity
-                <button class="btn" type="button">
-                  <span class="periodTxt">Period:</span>
-                  <select class="timePeriod">
+
+                <!-- <span class="btn"> -->
+                  <button class="btn">Period: <span id="periodAmount"> 1 week</span><span id="periodDropdown" class="octicon octicon-triangle-down"></span>
+                </button>
+                  <!-- <select class="timePeriod">
                     <option value="" selected disabled>Filter Activity</option>
                     <option>1 day</option>
                     <option>3 days</option>
                     <option>1 week</option>
                     <option>1 month</option>
-                  </select>
-                </button>
+                  </select> -->
             </h3>
             <div class="publicActivityDiv">octocat has no activity during this period.</div>
         </div>

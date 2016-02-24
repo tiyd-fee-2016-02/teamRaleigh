@@ -35,7 +35,7 @@ $(document).ready( function () {
   });
 
   // some of these are not pulling in correctly. We will continue to troubleshoot them
-  $.getJSON( "https://api.github.com/users/mike-crane", function( json ) {
+  $.getJSON( "https://api.github.com/users/octocat", function( json ) {
     var time = new Date(json.created_at).toLocaleDateString();
 
      $(".octocatImage").append('<img src="'+json.avatar_url+'" alt="avatar"></img>');
