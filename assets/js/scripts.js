@@ -8,6 +8,10 @@ $(document).ready( function () {
       $(this).addClass("activeTab"); // add class active to the tab that was clicked
       $(this).siblings().removeClass("activeTab"); //remove class active from other tabs
 
+      $(this).children().filter("div").addClass("activeBorder"); //hide the bottom border with an absolutely positioned div
+     $(this).siblings().children().filter("div").removeClass("activeBorder"); // show the bottom border again
+
+
       var contributions = $(".contributionsTab")[1];//set variables for all three sections to show/hide
       var publicActivity = $(".publicActivityTab")[1];
       var repositories = $(".repositoriesTab")[1];
