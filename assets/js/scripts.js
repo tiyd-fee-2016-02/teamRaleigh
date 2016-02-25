@@ -1,3 +1,5 @@
+//see if I can't get the 'user' name plugged in to wherever it's needed
+
 $(document).ready( function () {
   "use strict";
 
@@ -9,7 +11,7 @@ $(document).ready( function () {
       $(this).siblings().removeClass("activeTab"); //remove class active from other tabs
 
       $(this).children().filter("div").addClass("activeBorder"); //hide the bottom border with an absolutely positioned div
-     $(this).siblings().children().filter("div").removeClass("activeBorder"); // show the bottom border again
+      $(this).siblings().children().filter("div").removeClass("activeBorder"); // show the bottom border again for non-clicked items
 
 
       var contributions = $(".contributionsTab")[1];//set variables for all three sections to show/hide
@@ -34,11 +36,10 @@ $(document).ready( function () {
 
   });
 
-  // some of these are not pulling in correctly. We will continue to troubleshoot them
   $.getJSON( "https://api.github.com/users/octocat", function( json ) {
     var time = new Date(json.created_at).toLocaleDateString();
 
-     $(".octocatImage").append('<img src="'+json.avatar_url+'" alt="avatar"></img>');
+     $(".octocatImage").append('<img src="'+json.avatar_url+'" alt="avatar"></img>');//these pull in various json key values for specific elements on the page
      $(".name").html(json.name);
      $(".username").html(json.login);
      $(".org").html(json.company);
@@ -51,9 +52,16 @@ $(document).ready( function () {
      $(".following").html(json.following);
   });
 
-//let's replace the json.location api information with a lodash template-sourced thing
   var greeting = _.template('<%- p.location %>', { variable: 'p' });
   var renderedHtml = greeting({ location: 'Raleigh, NC' });
   $(".city").html(renderedHtml);
+
+  $.getJSON( "https://api.github.com/users/octocat/repos", function( json ) { //json for the contents under the toggling tabs
+
+    for (var i=0; i<5; i++){
+      $(".popRepositoriesList").append('<li class="repoTitle"><span class="octicon octicon-repo"></span>'+json[i].full_name+'</li><li class="description">'+json[i].description+'</li>');//under the .popRepositoriesList <ul>(s), this appends html directly to the page 5 times.
+    }
+
+  });
 
 });
