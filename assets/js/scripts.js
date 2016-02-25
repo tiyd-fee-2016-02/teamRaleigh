@@ -36,11 +36,10 @@ $(document).ready( function () {
 
   });
 
-  // some of these are not pulling in correctly. We will continue to troubleshoot them
   $.getJSON( "https://api.github.com/users/octocat", function( json ) {
     var time = new Date(json.created_at).toLocaleDateString();
 
-     $(".octocatImage").append('<img src="'+json.avatar_url+'" alt="avatar"></img>');
+     $(".octocatImage").append('<img src="'+json.avatar_url+'" alt="avatar"></img>');//these pull in various json key values for specific elements on the page
      $(".name").html(json.name);
      $(".username").html(json.login);
      $(".org").html(json.company);
@@ -53,38 +52,16 @@ $(document).ready( function () {
      $(".following").html(json.following);
   });
 
-  // if we use lodash for local json or remote json, we will need to modify the statment below instead of hard coding the thing like we did for 'Raleigh, NC'
   var greeting = _.template('<%- p.location %>', { variable: 'p' });
   var renderedHtml = greeting({ location: 'Raleigh, NC' });
   $(".city").html(renderedHtml);
 
-  $.getJSON( "https://api.github.com/users/octocat/repos", function( json ) { //json for the contents under the 'Contributions' tab
+  $.getJSON( "https://api.github.com/users/octocat/repos", function( json ) { //json for the contents under the toggling tabs
 
     for (var i=0; i<5; i++){
-      // $(".repoTitle").html(json[i].full_name);//this works!
-      //I will need to append a new list item every time the thing iterates
-      $(".repoTitle").append('<li class="repoTitle"><span class="octicon octicon-repo"></span>'+json[i].full_name+'</li>');//this does some stuff! But it sucks!
+      $(".popRepositoriesList").append('<li class="repoTitle"><span class="octicon octicon-repo"></span>'+json[i].full_name+'</li><li class="description">'+json[i].description+'</li>');//under the .popRepositoriesList <ul>(s), this appends html directly to the page 5 times.
     }
 
   });
-
-  // $.getJSON( "ajax/test.json", function( data ) {
-  // var items = [];
-  // $.each( data, function( key, val ) {
-  //   items.push( "<li id='" + key + "'>" + val + "</li>" );
-  // });
-  //
-  // $( "<ul/>", {
-  //   "class": "my-new-list",
-  //   html: items.join( "" )
-  //   }).appendTo( "body" );
-  // });
-
-//arrayName[objectNumber].objectAttribute
-
-// below are things to research
-// //let's replace the json.location api information with a lodash template-sourced thing
-//
-//   $.ajax
 
 });
