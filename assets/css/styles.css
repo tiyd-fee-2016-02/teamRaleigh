@@ -42,7 +42,6 @@ header {
     cursor: pointer;
 }
 
-
 /*styling for the github logo in the header*/
 
 #gitHubLogo {
@@ -399,6 +398,13 @@ img {
   display: none;
 }
 
+/*styling for heatmap image*/
+
+#heatMap {
+    width: 100%;
+    margin-top: 2em;
+}
+
 /*styling for footer*/
 
 .footerContainer {
@@ -407,7 +413,9 @@ img {
     text-align: center;
     color: #767676;
     border-top: 1px solid #eee;
-    margin-top: 3em;
+    margin-top: 30%;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 .footerNav {
