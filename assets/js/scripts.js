@@ -59,7 +59,7 @@ $(document).ready( function () {
   $.getJSON( "https://api.github.com/users/octocat/repos", function( json ) { //json for the contents under the toggling tabs
 
     for (var i=0; i<5; i++){
-      $(".popRepositoriesList").append('<li class="repoTitle"><span class="octicon octicon-repo"></span>'+json[i].full_name+'</li><li class="description">'+json[i].description+'</li>');//under the .popRepositoriesList <ul>(s), this appends html directly to the page 5 times.
+      $(".popRepositoriesList").append('<li class="repoTitle"><span class="octicon octicon-repo"></span>'+json[i].name+'</li><li class="description">'+json[i].description+'</li>');//under the .popRepositoriesList <ul>(s), this appends html directly to the page 5 times.
     }
 
   });
