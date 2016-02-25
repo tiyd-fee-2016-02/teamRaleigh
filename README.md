@@ -20,3 +20,5 @@ We worked together remotely (via Screenhero) to tackle the json business.
 2/24/16
 
 Mike added the nav elements next to the search bar providing the mouse over effects, and got all the buttons, margins and padding looking close to pixel perfect. 
+
+Jeremy worked on getting information populated into the hideable/showable tab sections via json/the github API
