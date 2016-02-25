@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE <html></html>
 <html>
   <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
@@ -11,63 +11,127 @@
       <header>
           <span id="gitHubLogo" class="octicon octicon-mark-github"></span>
           <input type="text" class="searchBar" placeholder="Search GitHub">
+          <div class="headerNav">
+              <span id="pullRequests">Pull requests</span>
+              <span id="issues">Issues</span>
+              <span id="gists">Gists</span>
+          </div>
       </header>
       <aside class="sideBar">
-            <img class="octocatImage" src="assets/images/octocatImage.jpeg" alt="Octocat Icon" />
-            <h3 class="name">The Octocat</h3>
-            <h4 class="username">octocat</h4>
+            <span class="octocatImage"></span>
+            <h3 class="name"></h3>
+            <h4 class="username"></h4>
             <ul class="userInfo">
-                <li><span class="listIcon octicon octicon-organization"></span>GitHub</li>
-                <li><span class="listIcon octicon octicon-location"></span>San Francisco</li>
-                <li><span class="listIcon octicon octicon-mail"></span><a href="mailto:octocat@github.com">octocat@github.com</a></li>
-                <li><span class="listIcon octicon octicon-link"></span><a href="http://www.github.com/blog">http://www.github.com/blog</a></li>
-                <li><span class="listIcon octicon octicon-clock"></span>Joined on Jan 25, 2011</li>
+                <li><span class="listIcon octicon octicon-organization"></span><span class="org"></span></li>
+                <li><span class="listIcon octicon octicon-location"></span><span class="city"></span></li>
+                <li><span class="listIcon octicon octicon-mail"></span><a class="emailAddress"></a></li>
+                <li><span class="listIcon octicon octicon-link"></span><span class="blog"></span></a></li>
+                <li><span class="listIcon octicon octicon-clock"></span><span>Joined on </span><span class="dateJoined"></span></li>
             </ul>
             <div class="statsDiv">
-                <div class="stats"><h1 class="statFigures">1.3k</h1><h4 class="statUnits">Followers</h4></div>
-                <div class="stats"><h1 class="statFigures">2</h1><h4 class="statUnits">Starred</h4></div>
-                <div class="stats"><h1 class="statFigures">6</h1><h4 class="statUnits">Following</h4></div>
+                <div class="stats"><h1 class="statFigures followers">1.3k</h1><h4 class="statUnits">Followers</h4></div>
+                <div class="stats"><h1 class="statFigures starred">2</h1><h4 class="statUnits">Starred</h4></div>
+                <div class="stats"><h1 class="statFigures following">6</h1><h4 class="statUnits">Following</h4></div>
             </div>
       </aside>
       <section class="rightColumn">
-          <section class="contributions">
-                    <h2 class="firstTab">Contributions</h2>
-              <div class="tabContainer">
-                      <h3 class="popularRepositories">Popular repositories</h3>
-                          <ul class="repositories">
-                              <li class="repoTitle"><span class="octicon octicon-repo"></span>
-                                  Spoon-Knife
-                              </li>
-                                  <li class="description">This repo is for demonstration purposes only.</li>
-                              <li class="repoTitle"><span class="octicon octicon-repo"></span>
-                                  Hello-World
-                              </li>
-                                  <li class="description">My first repository on Github!</li>
-                              <li class="repoTitle"><span class="octicon octicon-repo"></span>
-                                  hello-world
-                              </li>
-                                  <li class="description">My first repository on Github!</li>
-                              <li class="repoTitle"><span class="octicon octicon-repo"></span>
-                                  octocat.github.io
-                              </li>
-                                  <li class="description"></li>
-                              <li class="repoTitle"><span class="octicon octicon-repo"></span>
-                                  git-consortium
-                              </li>
-                                  <li class="description">This repo is for demonstration purposes only.</li>
-                         </ul>
-              </div>
-                      <h3 class="contributionActivity">
-                          Contribution Activity
-                      </h3>
-          </section>
-          <section class="repositories">
-          </section>
-          <section class="publicActivity">
-          </section>
+        <div class="rightColumnHeader">
+            <h2 class="tab contributionsTab activeTab"><span class="octicon octicon-diff-added"></span> Contributions<div class="bottomBorder activeBorder"></div></h2>
+            <h2 class="tab repositoriesTab"><span class="octicon octicon-rss"></span> Repositories<div class="bottomBorder"></div></h2>
+            <h2 class="tab publicActivityTab"><span class="octicon octicon-repo"></span> Public activity<div class="bottomBorder"></div></h2>
+            <div class="headerBtnsRight">
+                <button class="followBtn" type="button"><span class="octicon octicon-person"></span> Follow</button>
+                <button class="blockBtn"><span class="octicon octicon-stop"></span><span id="blockBtnDropdown" class="octicon octicon-triangle-down"></span></button>
+
+                    <!-- <select class="blockBtnDropdown"></select> -->
+                    <!-- <option value="" selected disabled></option>
+                    <option value="" selected disabled>User actions</option>
+                    <option>Block user</option>
+                    <option>Report abuse</option> -->
+            </div>
+        </div>
+        <div class="tabContainer contributionsTab">
+            <div class="popRepoTabContents">
+                <h3 class="popularRepositories">Popular repositories</h3>
+                <ul class="popRepositoriesList">
+                    <li class="repoTitle"><span class="octicon octicon-repo"></span>
+                        Spoon-Knife
+                    </li>
+                        <li class="description">This repo is for demonstration purposes only.</li>
+                    <li class="repoTitle"><span class="octicon octicon-repo"></span>
+                        Hello-World
+                    </li>
+                        <li class="description">My first repository on Github!</li>
+                    <li class="repoTitle"><span class="octicon octicon-repo"></span>
+                        hello-world
+                    </li>
+                        <li class="description">My first repository on Github!</li>
+                    <li class="repoTitle"><span class="octicon octicon-repo"></span>
+                        octocat.github.io
+                    </li>
+                        <li class="description"></li>
+                    <li class="repoTitle"><span class="octicon octicon-repo"></span>
+                        git-consortium
+                    </li>
+                        <li id="lastDescription" class="description">This repo is for demonstration purposes only.</li>
+                </ul>
+            </div>
+            <div id="heatMap"><img src="assets/images/HeatMap.png" alt="Heat Map" /></div>
+            <h3 class="contributionActivity">
+                Contribution Activity
+
+                <!-- <span class="btn"> -->
+                  <button class="btn">Period: <span id="periodAmount"> 1 week</span><span id="periodDropdown" class="octicon octicon-triangle-down"></span>
+                </button>
+                  <!-- <select class="timePeriod">
+                    <option value="" selected disabled>Filter Activity</option>
+                    <option>1 day</option>
+                    <option>3 days</option>
+                    <option>1 week</option>
+                    <option>1 month</option>
+                  </select> -->
+            </h3>
+            <div class="publicActivityDiv">octocat has no activity during this period.</div>
+        </div>
+        <div class="tabContainer repositoriesTab hidden">
+          <div class="reposSearchHeader">
+            <input type="text" class="searchBar" placeholder="Find a repository...">
+            <button class="searchReposBtn" type="button">Search</button>
+            <div class="searchBarNav">All  Sources  Forks  Mirrors</div>
+          </div>
+          <ul class="popRepositoriesList">
+              <li class="repoTitle"><span class="octicon octicon-repo"></span>
+                  Spoon-Knife
+              </li>
+                  <li class="description">This repo is for demonstration purposes only.</li>
+              <li class="repoTitle"><span class="octicon octicon-repo"></span>
+                  Hello-World
+              </li>
+                  <li class="description">My first repository on Github!</li>
+              <li class="repoTitle"><span class="octicon octicon-repo"></span>
+                  hello-world
+              </li>
+                  <li class="description">My first repository on Github!</li>
+              <li class="repoTitle"><span class="octicon octicon-repo"></span>
+                  octocat.github.io
+              </li>
+                  <li class="description"></li>
+              <li class="repoTitle"><span class="octicon octicon-repo"></span>
+                  git-consortium
+              </li>
+                  <li class="description">This repo is for demonstration purposes only.</li>
+          </ul>
+        </div>
+        <div class="tabContainer publicActivityTab hidden">
+            <div class="publicActivityDiv">octocat doesn't have any public events to show.</div>
+        </div>
       </section>
-      <footer>
+      <footer class="footerContainer">
+          <section class="footerNav">© 2016 GitHub, Inc.    Terms    Privacy    Security    Contact    Help <span id="octocatFooterIcon" class="octicon octicon-mark-github"></span> Status    API    Training    Shop    Blog    About    Pricing</section>
       </footer>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.5.1/lodash.js"></script>
+      <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+      <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
       <script src="assets/js/scripts.js"></script>
   </body>
 </html>

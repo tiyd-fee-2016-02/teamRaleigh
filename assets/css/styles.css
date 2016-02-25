@@ -9,8 +9,37 @@ header {
   padding-right: 9%;
   padding-top: .5em;
   padding-bottom: .5em;
-  border-bottom: solid 2px #e5e5e5;
+  border-bottom: solid 1px #e5e5e5;
   background-color: #f5f5f5;
+}
+
+.headerNav {
+    display: inline-block;
+    padding: 4px 8px;
+
+    font-weight: bold;
+    line-height: 20px;
+    color: #333;
+}
+
+#pullRequests, #issues, #gists {
+    padding-right: 8.5px;
+    font-size: 12px;
+}
+
+#pullRequests:hover {
+    color: #4078c0;
+    cursor: pointer;
+}
+
+#issues:hover {
+    color: #4078c0;
+    cursor: pointer;
+}
+
+#gists:hover {
+    color: #4078c0;
+    cursor: pointer;
 }
 
 /*styling for the github logo in the header*/
@@ -25,10 +54,12 @@ header {
 
 .searchBar {
   font-size: .75em;
-  padding: .6em;
+  padding: .4em;
+  margin-top: .4em;
+  margin-bottom: .4em;
   border-radius: .3em;
   border: solid 1px #ccc;
-  width: 31%;
+  width: 37%;
   display: inline-block;
   vertical-align: top;
 }
@@ -37,7 +68,7 @@ header {
 
 .sideBar {
   margin-left: 9%;
-  width: 19%;
+  width: 20%;
   /*border: 1px solid black;*/
   display: inline-block;
   margin-top: 20px;
@@ -47,8 +78,14 @@ header {
 /*styling for the image of the octocat*/
 
 .octocatImage {
-  max-width: 100%;
+  width: 230px;
+  /*height: 230px;*/
   border-radius: .5em;
+}
+
+img {
+  width: inherit;
+  border-radius: inherit;
 }
 
 /*styling for the username*/
@@ -123,7 +160,6 @@ header {
 
 .rightColumn {
   width: 60%;
-  /*border: 1px solid black;*/
   display: inline-block;
   padding: 0 0 2em .5em;
   margin-top: 20px;
@@ -131,61 +167,130 @@ header {
   float: right;
 }
 
-/*styling for the contributions tab*/
+/*styling for header of right column*/
 
-.contributions {
-    font-weight: lighter;
-    font-size: 1em;
-    padding-top: .5em;
+.rightColumnHeader {
+  margin-bottom: 1.5em;
+  border-bottom: solid 1px #e5e5e5;
 }
 
-/*styling for firstTab*/
+/*styling for all Tabs*/
 
-.firstTab {
-    padding-bottom: 1em;
+.tab {
+  position: relative;
+  font-weight: lighter;
+  font-size: .9em;
+  padding-bottom: 1em;
+  display: inline-block;
+  padding: .6em;
 }
 
-/*styling for tabContainer*/
+/*styling for the active tab*/
 
-.tabContainer {
-    border: solid 1px #e5e5e5;
-    border-radius: .2em;
+.activeTab {
+  border: solid 1px #e5e5e5;
 }
+
+/*Styling for the object we display below the active tab to cover the border*/
+
+.activeBorder {
+  position: absolute;
+  border: solid 1px white;
+  top: 33;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/*styling for the follow and block buttons*/
+
+.headerBtnsRight {
+    float: right;
+}
+
+/*styling for green follow button*/
+
+.followBtn {
+    background-color: #60b044;
+    color: white;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.15);
+    border: .5px solid #d5d5d5;
+    border-radius: 3px;
+    background-image: linear-gradient(#8add6d, #60b044);
+    border-color: #5ca941;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 20px;
+    padding: 2px 10px;
+    cursor: pointer;
+}
+
+/*styling for the block button*/
+
+.blockBtn {
+    border-radius: 3px;
+    background-color: #eee;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 20px;
+    color: #333;
+    white-space: nowrap;
+    vertical-align: middle;
+    border: 1px solid #d5d5d5;
+    display: inline-block;
+    padding: .3em .3em .3em .5em;
+    background-image: linear-gradient(#fcfcfc, #eee);
+    margin-left: .4em;
+    cursor: pointer;
+    }
+
+    #blockBtnDropdown {
+        font-size: .75em;
+        padding-left: .4em;
+        padding-bottom: .3em;
+        padding-right: .5em;
+    }
+
 
 /*styling for the popularRepositories section */
 
 .popularRepositories {
-    font-size: .9em;
-    font-weight: bold;
-    border-bottom: solid 1px #e5e5e5;
-    padding: .7em 0 .7em .5em;
-    background-color: #f5f5f5;
+  font-size: .9em;
+  font-weight: bold;
+  border-bottom: solid 1px #e5e5e5;
+  padding: .7em 0 .7em .5em;
+  background-color: #f5f5f5;
 }
 
-/*styling for repositories */
+.popRepoTabContents {
+  border: solid 1px #e5e5e5;
+  border-radius: .2em;
+}
 
-.repositories {
+/*styling for list of popular repositories */
+
+.popRepositoriesList {
     text-decoration: none;
 }
 
 /*styling for octicon octicon-repo icons*/
 
 .octicon.octicon-repo {
-    color: #767676;
-    padding-right: .2em;
-    padding-left:  .7em;
+  color: #767676;
+  padding-right: .2em;
+  padding-left:  .7em;
 }
 
 /*styling for repoTitle*/
 
 .repoTitle {
-    color: #4078c0;
-    width: 45%;
-    display: inline-block;
-    padding-top: .5em;
-    padding-bottom: .5em;
-    font-weight: bold;
-    font-size: .9em;
+  color: #4078c0;
+  width: 45%;
+  display: inline-block;
+  padding-top: .5em;
+  padding-bottom: .5em;
+  font-weight: bold;
+  font-size: .9em;
 }
 
 /*styling for stars on right side*/
@@ -203,4 +308,129 @@ header {
     font-size: .8em;
     color: #666;
     font-weight: 500;
+    border-bottom: solid 1px #e5e5e5;
+}
+
+/*styling for last description list item*/
+
+#lastDescription {
+  border-bottom-style: none;
+}
+
+/*Styling for contribution activity section*/
+
+.contributionActivity {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+/*styling for contribution activity button*/
+
+.btn {
+    border-color: #cfcfcf;
+    border: 1px solid #d5d5d5;
+    border-radius: 3px;
+    background-image: linear-gradient(#fcfcfc, #eee);
+    float: right;
+    padding-top: .3em;
+    padding-bottom: .3em;
+    color: #767676;
+    padding-left: .6em;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+#periodAmount {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: black;
+    font-size: 13px;
+}
+
+#periodDropdown {
+    font-size: .85em;
+    padding-left: .4em;
+    padding-bottom: .3em;
+    padding-right: .3em;
+    color: black;
+}
+
+/*Styling for search bar header under Repositories tab*/
+
+.reposSearchHeader {
+  padding-bottom: 1em;
+  border-bottom: solid 1px #e5e5e5;
+}
+
+/*Styling for contents under Repositories tab*/
+
+.searchReposBtn {
+  padding: .75em;
+  font-weight: bold;
+  border-radius: 3px;
+  border: solid 1px #e5e5e5;
+}
+
+/*Styling for search bar nav terms*/
+
+.searchBarNav {
+  display: inline-block;
+  float: right;
+}
+
+/*Styling for public activity list*/
+
+.publicActivityDiv {
+  padding: 3em;
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  background-color: #fafafa;
+  border: 1px solid #e5e5e5;
+  border-radius: 3px;
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+}
+
+/*Styling for hidden divs*/
+
+.hidden {
+  display: none;
+}
+
+/*styling for heatmap image*/
+
+#heatMap {
+    width: 100%;
+    margin-top: 2em;
+}
+
+/*styling for footer*/
+
+.footerContainer {
+    margin-left: 9%;
+    margin-right: 9%;
+    text-align: center;
+    color: #767676;
+    border-top: 1px solid #eee;
+    margin-top: 30%;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.footerNav {
+    display: inline-block;
+    font-size: .8em;
+    line-height: 1.5;
+    padding-top: 5px;
+    padding-bottom: 40px;
+    margin-top: 40px;
+    word-wrap: break-word;
+    color: #4078c0;
+}
+
+#octocatFooterIcon {
+    font-size: 2em;
+    padding-left: 3em;
+    padding-right: 3em;
+    color: #ccc;
 }
